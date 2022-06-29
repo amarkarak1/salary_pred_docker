@@ -9,12 +9,12 @@ pipeline {
            }
            stage('Build Image') {
                 steps {
-                sh ' docker build -t salarypredapp:v1 .'
+                sh ' docker build -t salarypred1app:v1 .'
                 }
            }
            stage('Run Image') {
                 steps {
-                sh ' docker run -d -p 8501:8501 --name salarypred salarypredapp:v1'
+                sh ' docker run -d -p 8501:8501 --name salarypred1 salarypredapp:v1'
                 }
            }
            stage('Testing'){
